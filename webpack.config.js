@@ -12,7 +12,7 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: "Development",
+      template: "./src/index.html",
     }),
   ],
   output: {
@@ -20,9 +20,7 @@ module.exports = {
     path: path.resolve(__dirname, "dist"),
     clean: true,
   },
-  optimization: {
-    runtimeChunk: "single",
-  },
+
   module: {
     rules: [
       {
